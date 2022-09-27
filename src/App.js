@@ -7,8 +7,8 @@ import Carrito from "./components/Carrito";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import {CartProvider} from "./context/CartContext"
-
+import {CartProvider} from "./context/CartContext";
+import Checkout from "./components/Checkout";
 function App() {
   let tituloPrincipal = { text: "Somos Ramona Customs" };
   let tituloProductos = { text: "Nuestros Productos" };
@@ -25,6 +25,7 @@ function App() {
         <Route path="/categoria/:categoriaId" element={<ItemListContainer />} />
         <Route path='/detalle/:id' element={<ItemDetailContainer />} />
         <Route path='/carrito' element={<Carrito />} />
+        <Route path='/checkout' element={<Checkout />} />
       </Routes>
       <Footer />
     </BrowserRouter>

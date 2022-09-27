@@ -7,7 +7,7 @@ import {useCart} from "../context/CartContext"
 
 export default function ItemDetail({ detailProducts }) {
   const [contador, setContador] = useState(1);
-  const { imagen, precio, descripcion, stock, nombre, id } = detailProducts;
+  const { imagen, precio, descripcion, stock, nombre, id} = detailProducts;
   const [compra, setCompra] = useState(false);
   const navigate = useNavigate();
   const{addItem}=useCart()

@@ -46,7 +46,7 @@ export default function ItemListContainer() {
   // }, [categoriaId]);
   console.log(listProducts);
   return (
-    <div style={styles}>
+    <div>
       {loading ? <p>Cargando...</p> : <ItemList listProducts={listProducts} />}
     </div>
   );
