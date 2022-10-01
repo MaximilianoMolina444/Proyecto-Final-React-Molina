@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -13,13 +14,18 @@
   align-items: center;
   flex-wrap: wrap;
 }
+.AppBody{
+  background-image: url(https://i.ibb.co/3c1yrcK/d1aa2aaabcad1f9a01a3ff4f0ae46288.jpg)
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+.navletters{
+  color: white;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -33,6 +39,11 @@
 
 .App-link {
   color: #61dafb;
+}
+.logo{
+  height:4rem;
+  width: 4rem;
+  margin-right: 1rem;
 }
 
 @keyframes App-logo-spin {

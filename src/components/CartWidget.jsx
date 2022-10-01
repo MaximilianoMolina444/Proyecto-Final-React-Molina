@@ -1,30 +1,22 @@
 import React from "react";
 import { FaCartArrowDown } from "react-icons/fa";
 import { useCart } from "../context/CartContext";
-
+import Button from "react-bootstrap/Button";
+import { useNavigate } from "react-router-dom";
 
 export default function CartWidget() {
 
-  const { cartQuantity } = useCart();
+  const { cartQuantity, cart } = useCart();
+  const navegar = useNavigate();
   return (
     <div>
-      <h3 >
-        {" "}
-        Mi Carrito
+      <h3 onClick={() => navegar("/carrito")}>
+      Mi Carrito: {cartQuantity() || ''}Items
+      
         <FaCartArrowDown />{" "}
       </h3>
+      
       
     </div>
   );
 }
-
-// const CartWidget = () =>{
-//     const {cartQuantity} = useCart()
-//     return (
-//         <div>
-//             <h3> Mi Carrito<FaCartArrowDown />  </h3>
-//             <span>{cartQuantity()}</span>
-//         </div>
-//     )
-// }
-// export default CartWidget

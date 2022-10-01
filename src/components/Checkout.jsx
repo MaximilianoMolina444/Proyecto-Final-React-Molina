@@ -5,6 +5,8 @@ import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../Firebase/firebase";
 import { useCart } from "../context/CartContext";
 import { useNavigate } from "react-router-dom";
+import toast, { Toaster } from 'react-hot-toast';
+
 export default function Checkout() {
   const navegar = useNavigate();
   const { cart, cartTotal, clear } = useCart();
@@ -20,7 +22,7 @@ export default function Checkout() {
   const finalizarCompra = (e) => {
     e.preventDefault();
     if (Object.values(comprador).length !== 3) {
-        alert("campos imcompletos")
+      toast.error("Complete los campos")
     } else {
         setLoader(true)
       const ventas = collection(db, "orders");
@@ -42,12 +44,13 @@ export default function Checkout() {
   if (loader) {
       return <p>Cargando...</p>
   }
+
   return (
     <div>
       {!orderId ? (
         <div>
-          <h2>Checkout</h2>
-          <h4>Complete los datos</h4>
+          <h2>Datos de contacto:</h2>
+          <h4>Complete los campos</h4>
           <form
             action=""
             style={{
@@ -85,11 +88,13 @@ export default function Checkout() {
         <div>
           <h2>Muchas gracias por su compra</h2>
           <h4>Su orden es: {orderId}</h4>
+          <h4>En Breve nos podemos en contacto</h4>
           <Button variant="primary" onClick={() => navegar("/")}>
             Inicio
           </Button>
         </div>
       )}
+      <Toaster/>
     </div>
   );
 }

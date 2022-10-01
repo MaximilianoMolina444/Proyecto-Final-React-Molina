@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from "react";
 import ItemList from "./ItemList";
-import { data } from "../mocks/mockData";
 import { useParams } from "react-router-dom";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../Firebase/firebase";
 export default function ItemListContainer() {
-  const styles = {
-    color: "blue",
-  };
   const [listProducts, setProductsList] = useState([]);
   const [loading, setLoading] = useState(false);
   const { categoriaId } = useParams();
@@ -30,24 +26,10 @@ export default function ItemListContainer() {
       .catch((error) => console.log(error))
       .finally(() => setLoading(false));
   }, [categoriaId]);
-  //mock
-  // useEffect(() => {
-  //   setLoading(true);
-  //   data
-  //     .then((res) => {
-  //       if (categoriaId) {
-  //         setProductsList(res.filter((item)=>item.categoria === categoriaId))
-  //       }else{
-  //         setProductsList(res)
-  //       }
-  //     })
-  //     .catch((err) => console.log(err))
-  //     .finally(() => setLoading(false));
-  // }, [categoriaId]);
-  console.log(listProducts);
   return (
-    <div>
-      {loading ? <p>Cargando...</p> : <ItemList listProducts={listProducts} />}
+    <div style={{marginTop:"1rem", textAlign:"center",}}>
+      <h1>Tienda:</h1>
+      {loading ? <p>Cargando...</p>  : <ItemList listProducts={listProducts} />}
     </div>
   );
 }

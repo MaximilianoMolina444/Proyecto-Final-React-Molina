@@ -3,14 +3,14 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import ItemCount from "./ItemCount";
 import { useNavigate } from "react-router-dom";
-import {useCart} from "../context/CartContext"
+import { useCart } from "../context/CartContext";
 
 export default function ItemDetail({ detailProducts }) {
   const [contador, setContador] = useState(1);
-  const { imagen, precio, descripcion, stock, nombre, id} = detailProducts;
+  const { imagen, precio, descripcion, stock, nombre, id } = detailProducts;
   const [compra, setCompra] = useState(false);
   const navigate = useNavigate();
-  const{addItem}=useCart()
+  const { addItem } = useCart();
   const onAdd = () => {
     let purchase = {
       nombre,
@@ -21,11 +21,22 @@ export default function ItemDetail({ detailProducts }) {
       id,
     };
     setCompra(true);
-    addItem(purchase)
+    addItem(purchase);
   };
   return (
-    <div>
-      <Card style={{ width: "18rem" }}>
+    <div style={{
+      padding: '2rem',
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      flexDirection: "column",
+    }}>
+      <h1>Tu Producto:</h1>
+      <Card
+        style={{
+          width: "18rem"
+        }}
+      >
         <Card.Img variant="top" src={imagen} />
         <Card.Body>
           <Card.Text>Precio: ${precio}</Card.Text>

@@ -9,3 +9,6 @@ Ramona Custom está basado en un emprendimiento real de ropa personalizada para 
 ### Librerías instaladas
 
 React-bootstrap
+React-Hot-Toast
+React-Icons
+

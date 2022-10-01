@@ -2,7 +2,9 @@ import Carousel from "react-bootstrap/Carousel";
 
 function Carrousell() {
   return (
-    <Carousel slide={false}>
+    <div style={{textAlign: 'center'}}>
+      <h1>Somos Ramona Customs</h1>
+      <Carousel slide={false}>
       <Carousel.Item>
         <img
           className="d-block w-100"
@@ -32,6 +34,7 @@ function Carrousell() {
         />
       </Carousel.Item>
     </Carousel>
+    </div>
   );
 }
 

@@ -1,37 +1,37 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import CartWidget from './CartWidget';
-import {NavLink} from 'react-router-dom';
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import CartWidget from "./CartWidget";
+import { NavLink } from "react-router-dom";
 
 function NavBar() {
   return (
-    <Navbar bg="light" expand="lg" >
-      <Container>
-        <Navbar.Brand as={NavLink} to="/" href="#home">Ramona Customs</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <div className="navBody">
+      <Navbar bg="dark" expand="lg" className="nav">
+      <Container className="navContainer navletters">
+        <img src="https://i.ibb.co/LZ5FQ8j/logo-modified.png" alt="" className="logo" />
+        <Navbar.Brand as={NavLink} to="/" href="#home" style={{color: "white"}}>
+          Ramona Customs
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav " />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link as={NavLink} to="/categoria/remeras">remeras</Nav.Link>
-            <Nav.Link as={NavLink} to="/categoria/especiales">especiales</Nav.Link>
-            <Nav.Link as={NavLink} to="/categoria/cuidado">cuidado</Nav.Link>
-            <NavDropdown title="Contacto" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Instagram</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                TikTok
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Whatssapp</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Hacenos tu consulta
-              </NavDropdown.Item>
-            </NavDropdown>
+          <Nav className="me-auto" >
+            <Nav.Link as={NavLink} to="/categoria/remeras" style={{color: "white"}}>
+              Remeras
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="/categoria/especiales" style={{color: "white"}}>
+              Especiales
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="/categoria/cuidado" style={{color: "white"}}>
+              Barbijos
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
-        <CartWidget/>
+        <CartWidget />
       </Container>
     </Navbar>
+    </div>
   );
 }
 

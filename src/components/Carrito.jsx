@@ -13,7 +13,6 @@ export default function Carrito() {
 
   const { cart, emptyCart, cartTotal } = useCart();
 
-  console.log("carrito", cart);
 
   return (
     <div>
@@ -27,7 +26,7 @@ export default function Carrito() {
         </>
       ) : (
         <>
-          <h3>Tu Carrito</h3>
+          <h3 style={{textAlign: "center"}}>Carrito:</h3>
 
           {cart.map((articulo) => (
             <CartItem key={articulo.id} articulo={articulo} />
