@@ -11,19 +11,19 @@ function NavBar() {
       <Navbar bg="dark" expand="lg" className="nav">
       <Container className="navContainer navletters">
         <img src="https://i.ibb.co/LZ5FQ8j/logo-modified.png" alt="" className="logo" />
-        <Navbar.Brand as={NavLink} to="/" href="#home" style={{color: "white"}}>
+        <Navbar.Brand as={NavLink} to="/" href="#home" style={{color: "white", fontFamily: "Roboto Condensed, sans-serif"}}>
           Ramona Customs
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav " />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto" >
-            <Nav.Link as={NavLink} to="/categoria/remeras" style={{color: "white"}}>
+            <Nav.Link as={NavLink} to="/categoria/remeras" style={{color: "white", fontFamily: "Roboto Condensed, sans-serif"}}>
               Remeras
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/categoria/especiales" style={{color: "white"}}>
+            <Nav.Link as={NavLink} to="/categoria/especiales" style={{color: "white", fontFamily: "Roboto Condensed, sans-serif"}}>
               Especiales
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/categoria/cuidado" style={{color: "white"}}>
+            <Nav.Link as={NavLink} to="/categoria/cuidado" style={{color: "white", fontFamily: "Roboto Condensed, sans-serif"}}>
               Barbijos
             </Nav.Link>
           </Nav>

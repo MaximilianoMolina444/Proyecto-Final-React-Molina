@@ -26,7 +26,7 @@ export default function ItemDetailContainer() {
   return (
     <div>
       {loading ? (
-        <p>Cargando...</p>
+        <p style={{ fontSize:"2rem",marginTop:"1rem", textAlign:"center", fontFamily: "Roboto Condensed, sans-serif"}}>Cargando...</p>
       ) : (
         <ItemDetail detailProducts={detailProducts} />
       )}

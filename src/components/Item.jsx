@@ -10,7 +10,7 @@ export default function Item({ product }) {
       <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src={imagen} style={{ height: "18rem" }} />
         <Card.Body>
-          <Card.Text>Precio: ${precio}</Card.Text>
+          <Card.Text>Precio: ${precio} </Card.Text>
           <Card.Text>Descripcion:{descripcion}</Card.Text>
           <Button variant="primary" onClick={()=>navegar(`/detalle/${id}`)}>¡Pedí la tuya!</Button>
         </Card.Body>

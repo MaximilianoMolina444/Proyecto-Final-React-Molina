@@ -39,18 +39,21 @@ export default function ItemDetail({ detailProducts }) {
       >
         <Card.Img variant="top" src={imagen} />
         <Card.Body>
-          <Card.Text>Precio: ${precio}</Card.Text>
-          <Card.Text>Descripcion: {descripcion}</Card.Text>
+          <Card.Text style={{fontSize:"2rem"}}>Precio: ${precio}</Card.Text>
+          <Card.Text >Descripcion: {descripcion}</Card.Text>
           {compra ? (
-            <div>
+            <div style={{textAlign:"center"}}>
+              <div style={{marginBottom: "10px"}}>
               <Button
                 variant="danger"
                 onClick={() => {
                   navigate("/");
                 }}
-              >
+                >
                 Seguir comprando
               </Button>
+              </div>
+              <div>
               <Button
                 variant="success"
                 onClick={() => {
@@ -59,6 +62,8 @@ export default function ItemDetail({ detailProducts }) {
               >
                 Ir al carrito
               </Button>
+              </div>
+              
             </div>
           ) : (
             <ItemCount

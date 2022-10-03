@@ -18,28 +18,30 @@ export default function Carrito() {
     <div>
       {!cart.length ? (
         <>
-          <h4>Tu Carrito esta vacio</h4>
-
-          <Button variant="primary" onClick={() => navegar("/")}>
+          <h4 style={{ fontSize:"2rem",marginTop:"1rem", textAlign:"center", fontFamily: "Roboto Condensed, sans-serif"}}>Tu Carrito esta vacio</h4>
+          <div style={{textAlign:"center", margin:"10px"}}>
+          <Button variant="primary" onClick={() => navegar("/")} >
             Ir al shop
           </Button>
+          </div>
+          
         </>
       ) : (
         <>
           <h3 style={{textAlign: "center"}}>Carrito:</h3>
 
           {cart.map((articulo) => (
-            <CartItem key={articulo.id} articulo={articulo} />
+            <CartItem key={articulo.id} articulo={articulo}/>
           ))}
 
-          <span>Total a pagar: ${cartTotal()}</span>
+          <span style={{ fontSize:"2rem", marginTop:"1rem", textAlign:"center", fontFamily: "Roboto Condensed, sans-serif"}}>Total a pagar: ${cartTotal()}</span>
 
-          <div>
-            <Button variant="primary" onClick={() => navegar("/checkout")} >Terminar compra </Button>
-
+          <div style={{textAlign:"center"}}>
+            <Button variant="primary" onClick={() => navegar("/checkout")}style={{margin:"10px"}}>Terminar compra </Button>
             <Button variant="danger" onClick={emptyCart}>
               Vaciar carrito
             </Button>
+          
           </div>
         </>
       )}

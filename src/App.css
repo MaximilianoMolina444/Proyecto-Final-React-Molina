@@ -23,6 +23,10 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.navLinks{
+  color: white;
+  text-decoration: none
+}
 .navletters{
   color: white;
 }

@@ -27,9 +27,9 @@ export default function ItemListContainer() {
       .finally(() => setLoading(false));
   }, [categoriaId]);
   return (
-    <div style={{marginTop:"1rem", textAlign:"center",}}>
+    <div style={{marginTop:"1rem", textAlign:"center", fontFamily: "Roboto Condensed, sans-serif"}}>
       <h1>Tienda:</h1>
-      {loading ? <p>Cargando...</p>  : <ItemList listProducts={listProducts} />}
+      {loading ? <p style={{ fontSize:"2rem",marginTop:"1rem", textAlign:"center", fontFamily: "Roboto Condensed, sans-serif"}}>Cargando...</p>  : <ItemList listProducts={listProducts} />}
     </div>
   );
 }

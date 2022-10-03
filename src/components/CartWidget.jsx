@@ -11,7 +11,7 @@ export default function CartWidget() {
   return (
     <div>
       <h3 onClick={() => navegar("/carrito")}>
-      Mi Carrito: {cartQuantity() || ''}Items
+      Mi Carrito: {cartQuantity() || ''}
       
         <FaCartArrowDown />{" "}
       </h3>

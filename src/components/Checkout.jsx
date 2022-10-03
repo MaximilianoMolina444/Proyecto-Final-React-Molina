@@ -42,7 +42,7 @@ export default function Checkout() {
     
   };
   if (loader) {
-      return <p>Cargando...</p>
+      return <p style={{ fontSize:"2rem",marginTop:"1rem", textAlign:"center", fontFamily: "Roboto Condensed, sans-serif"}}>Cargando...</p>
   }
 
   return (
@@ -79,17 +79,17 @@ export default function Checkout() {
               name="email"
               onChange={datosComprador}
             />
-            <Button variant="primary" type="submit">
+            <Button variant="primary" type="submit" style={{margin: "10px"}}>
               Terminar compra{" "}
             </Button>
           </form>
         </div>
       ) : (
-        <div>
+        <div style={{textAlign: "center"}}>
           <h2>Muchas gracias por su compra</h2>
           <h4>Su orden es: {orderId}</h4>
           <h4>En Breve nos podemos en contacto</h4>
-          <Button variant="primary" onClick={() => navegar("/")}>
+          <Button variant="primary" onClick={() => navegar("/")} style={{marginBottom: "10px"}}>
             Inicio
           </Button>
         </div>

@@ -2,7 +2,7 @@ import Carousel from "react-bootstrap/Carousel";
 
 function Carrousell() {
   return (
-    <div style={{textAlign: 'center'}}>
+    <div style={{textAlign: 'center', fontFamily: "Roboto Condensed, sans-serif"}}>
       <h1>Somos Ramona Customs</h1>
       <Carousel slide={false}>
       <Carousel.Item>
